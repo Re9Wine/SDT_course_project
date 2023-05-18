@@ -1,0 +1,114 @@
+.container-Home {
+    width: 1440px;
+    height: 893px;
+    min-height: 100%;
+}
+
+.img_home1{
+    position: relative;
+    width: 580px;
+    height: 468px;
+    left: 600px;
+    top: 40px;
+    
+    background: no-repeat url(C:/Users/Виктория/web-app/src/img/imageHome1.jpg);
+}
+
+.img_home2{
+    position: relative;
+    width: 580px;
+    height: 468px;
+    left: -45px;
+
+    background: no-repeat url(C:/Users/Виктория/web-app/src/img/imageHome2.jpg);
+    background-size: 100%;
+}
+
+.text_home1 {
+    position: absolute;
+    width: 590px;
+    height: 200px;
+    left: 60px;
+    top: 365px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    color: #000000;
+}
+
+.text_home2 {
+    position: absolute;
+    width: 594px;
+    height: 212px;
+    left: 670px;
+    top: 905px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.container-Advantages {
+    display: grid;
+    grid-template-columns: 492px 400px 492px;
+    width: 1440px;
+    height: 349px;
+    padding-left: 0px;
+    align-items: center;
+    padding-bottom: 90px;
+}
+
+.adv{
+    display: flex;
+}
+
+.text-adv{
+    position: relative;
+    width: 274px;
+    height: 22px;
+    left: -130px;
+    top: 203px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    
+     text-align: center;
+     
+    color: #000000;
+}
+
+.img_icon1{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 62px;
+    top: 0px;
+
+    background-image: url(C:\Users\Виктория\web-app\src\img\icon1.png);
+}
+
+.img_icon2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 65px;
+    top: 0px;
+    background-image: url(C:\Users\Виктория\web-app\src\img\icon2.png);
+}
+
+.img_icon3 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 82px;
+    top: 0px;
+    background-image: url(C:\Users\Виктория\web-app\src\img\icon3.png);
+}

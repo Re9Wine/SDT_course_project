@@ -1,6 +1,6 @@
 {
-  "short_name": "Core",
-  "name": "Core",
+  "short_name": "VirtualLaboratory",
+  "name": "VirtualLaboratory",
   "icons": [
     {
       "src": "favicon.ico",

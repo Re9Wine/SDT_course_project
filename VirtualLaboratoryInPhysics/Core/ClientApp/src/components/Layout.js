@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
-import { NavMenu } from './NavMenu';
+import { NavigationMenu } from './NavigationMenu';
+import { Footer } from './Footer';
 
 export class Layout extends Component {
-  static displayName = Layout.name;
+    static displayName = Layout.name;
 
-  render () {
-    return (
-      <div>
-        <NavMenu />
-        <Container>
-          {this.props.children}
-        </Container>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <NavigationMenu />
+                <Container>
+                    {this.props.children}
+                    <Footer />
+                </Container>
+            </div>
+        );
+    }
 }

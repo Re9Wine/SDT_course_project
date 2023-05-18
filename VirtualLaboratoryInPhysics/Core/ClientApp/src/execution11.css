@@ -1,0 +1,249 @@
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #000000;
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper {
+    position: absolute;
+    max-width: 1440px;
+    max-height: 2570px;
+    left: 1px;
+    top: 300px;
+}
+
+.Laborator__setup {
+    position: relative;
+    width: 1440px;
+    max-height: 600px;
+    left: 0px;
+    top:25px;
+}
+
+.lab11__titile {
+    position: relative;
+    width: 701px;
+    height: 50px;
+    left: 41px;
+    top: 35px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.lab11__name {
+    position:relative;
+    margin-left: 40px;
+    font-size: 18px;
+    top:10px;
+}
+
+.lab11_text1 {
+    margin-right: 40px;
+    position: relative;
+    width: 600px;
+    max-height: 270px;
+    margin-left: auto;
+    padding-right: 59px;
+    top: 102px;
+/*    text-indent: 40px each-line;
+*/    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.Laborator__setup__block {
+    position: relative;
+    width: 736px;
+    height: 391px;
+    left: 0px;
+    top: -200px;
+    background: #FFFFFF;
+    overflow: hidden;
+    z-index: 101;
+}
+
+#Laborator__setup__block{
+    z-index: 1;
+}
+
+.hole img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Diffraction__pattern {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-left: 55px;
+    top: -165px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    z-index: 102;
+}
+
+.Border__betwee__zones {
+    position: relative;
+    width: 1440px;
+    height: 100px;
+    left: 0px;
+}
+
+.measurements {
+    position: relative;
+    max-width: 1440px;
+    max-height: 400px;
+    left: -50px;
+}
+
+.lab11_text2 {
+    position: relative;
+    width: 580px;
+    height: 243px;
+    left: 120px;
+    top: 28px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.Explanation {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    left: 750px;
+    background: #FFFFFF;
+    margin-top: -258px;
+}
+
+.Explanation img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.vertical__line{
+    position: relative;
+    border-left: 3px solid #31708E;
+    height: 350px;
+}
+
+.Diffraction__pattern__block {
+    position: relative;
+    width: 1440px;
+    max-height: 520px;
+    left: -50px;
+}
+
+.lab11_text3 {
+    position: relative;
+    width: 530px;
+    height: 513px;
+    left: 854px;
+    top: 0px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+#formula{
+    text-align:center;
+}
+
+.scale__hole {
+    position: relative;
+    width: 736px;
+    height: 391px;
+    left: 69px;
+    top: -461px;
+}
+
+.hole {
+    width: 736px;
+    height: 391px;
+    left: 0px;
+    top: 0px;
+}
+
+.scale {
+    position: relative;
+    width: 614px;
+    height: 194px;
+    left: 61px;
+    top: 99px;
+    border: 1px solid #000000;
+}
+
+.table__and__conclusion {
+    position: relative;
+    width: 1440px;
+    max-height: 500px;
+    left: 0px;
+    margin-bottom: 100px;
+}
+
+.lab11__text4 {
+    position: relative;
+    width: 428px;
+    height: 297px;
+    left: 47px;
+    top: 0px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.form__lab11 {
+    position:relative;
+    bottom: 270px;
+    width: 905px;
+    height: 99px;
+    margin-left: 47px;
+}
+
+.form__conclusion__lab11 {
+    position: relative;
+    width: 905px;
+    height: 99px;
+    background: #F7F9FB;
+    border: 1px solid #000000;
+    border-radius: 30px;
+}
+
+.form__submit__lab11 {
+    position: relative;
+    left: 980px;
+    bottom: 47px;
+    width: 262px;
+    height: 48px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: rgba(0, 125, 215, 0);
+}
+
+.lab11__table {
+    position: relative;
+    width: 830px;
+    height: 274px;
+    bottom: 312px;
+    margin-left: 485px;
+    border: 8px solid transparent;
+}
+
+.table__tittle_lab11 {
+    color: white;
+    background: #31708E;
+}
+
+.cell__lab11 {
+    border: none;
+    width:50px;
+}

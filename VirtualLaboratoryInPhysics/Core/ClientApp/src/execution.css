@@ -1,0 +1,478 @@
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #000000;
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper {
+    position: absolute;
+    max-width: 1440px;
+    max-height: 2570px;
+    left: 1px;
+    top: 300px;
+}
+
+.work-block {
+    box-sizing: border-box;
+    width: 1440px;
+    height: 700px;
+    left: 0px;
+    bottom: 800px;
+    border-bottom: 1px solid #000000 !important;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.work__text {
+    position: absolute;
+    max-width: 587px;
+    max-height: 645px;
+    left: 64px;
+    top: 50px;
+}
+
+.work__title {
+    width: 400px;
+    height: 40px;
+    left: 0px;
+    bottom: 605px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.work__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.work__order {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.work__device {
+    position: relative;
+    max-width: 670px;
+    height: 496px;
+    left: 677px;
+    top: 98px;
+}
+
+.rectangle {
+    box-sizing: border-box;
+    position:relative;
+    top: 48px;
+    left:35px;
+    width: 600px;
+    height: 400px;
+
+    line-height:25;
+    text-align:center;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+}
+
+.handle1 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 227px;
+    height: 110px;
+    left: 76px;
+    top: 0;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.handle2 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 227px;
+    height: 110px;
+    left: 355px;
+    top: 388px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.handle1:hover,
+.handle2:hover {
+    background: #cccccc;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.program__block {
+    box-sizing: border-box;
+    width: 1440px;
+    height: 650px;
+    left: 0px;
+    top: 700px;
+    border-bottom: 1px solid #000000;
+}
+
+.program__program {
+    position: relative;
+    width: 650px;
+    height: 500px;
+    left: 70px;
+    top: 75px;
+    border: 1px solid #000000;
+}
+
+.program__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+}
+
+.program_line {
+    border-bottom: 1px solid #000000;
+}
+
+.programm__images {
+    position: relative;
+    width: 599px;
+    height: 175px;
+    left: 22px;
+    top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.programm__firstPosition {
+    width: 275px;
+    height: 175px;
+    text-align:center;
+}
+
+.firstPosition__crossed {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 46px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+
+}
+
+.firstPosition__crossed__img{
+    max-width: 100%;
+    height: auto;
+}
+
+.secondPosition__crossed__img{
+    max-width: 100%;
+    height: auto;
+}
+
+.firstPosition__crossed__text {
+    position: absolute;
+    width: 99px;
+    height: 20px;
+    left: 1px;
+    top: 155px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.firstPosition__parallel {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 156px;
+    top: 46px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.firstPosition__parallel__text {
+    position: absolute;
+    width: 120px;
+    height: 20px;
+    left: 148px;
+    top: 155px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.programm__secondPosition {
+    width: 275px;
+    height: 175px;
+    margin-left: 45px;
+    text-align: center;
+}
+
+.secondPosition__crossed {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 46px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.secondPosition__crossed__text {
+    position: absolute;
+    width: 99px;
+    height: 20px;
+    top: 155px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.secondPosition__parallel {
+    box-sizing: border-box;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 146px;
+    top: 6px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.secondPosition__parallel__text {
+    position: relative;
+    width: 120px;
+    height: 20px;
+    left: 140px;
+    top: 15px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.program__calculations {
+    position:relative;
+    width: 650px;
+    height: 198px;
+    left: 0px;
+    top: 69px;
+}
+
+.program_calculations__line {
+    width: 178px;
+    border-bottom: 1px solid #000000;
+}
+
+.program_title {
+    padding-left: 37px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.program__flex {
+    display: flex;
+    flex-direction: row;
+    width: 648px;
+}
+
+.position {
+    width: 162px;
+    text-align: center;
+}
+
+.program__screen {
+    position: absolute;
+    width: 581px;
+    height: 680px;
+    left: 781px;
+    top: 575px;
+}
+
+.program__monitor {
+    box-sizing: border-box;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 113px;
+    top: 143px;
+    border: 1px solid #000000;
+    border-radius: 175px;
+    overflow: hidden;
+}
+
+.program__monitor img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.program__monitor img:last-child {
+    z-index: 2;
+}
+
+.result{
+    margin-left: 370px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.arrow1 {
+    position: relative;
+    width: 154px;
+    height: 200px;
+    left: 427px;
+    top: -17px;
+    background: url('../src/img/svg/arrow1.svg') no-repeat;
+}
+
+.arrow2 {
+    position: absolute;
+    width: 214px;
+    height: 190px;
+    left: 0px;
+    top: 504px;
+    background: url('../src/img/svg/arrow2.svg') no-repeat;
+}
+
+.calculations {
+    box-sizing: border-box;
+    width: 1440px;
+    height: 1050px;
+    left: 0px;
+    top: 1350px;
+}
+
+.calculations__formula {
+    position: relative;
+    width: 500px;
+    height: 113px;
+    left: 61px;
+    top: 60px;
+}
+
+.calculations__formula__text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.calculations__formula__img {
+    width: 378px;
+    height: 40px;
+    background: url('../src/img/formula.png') no-repeat;
+}
+
+.calculations__text {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    left: 61px;
+    top: 150px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.calculations_table {
+    position: relative;
+    width: 1019px;
+    height: 210px;
+    left: 61px;
+    top: 165px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+td, tr{
+    text-align:center;
+}
+
+.calculations__form {
+    position: relative;
+    width: 1270px;
+    height: 300px;
+    left: 61px;
+    top: 240px;
+}
+
+.calculations__form__text {
+    position: absolute;
+    width: 418px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.calculations__form__conclusion {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1019px;
+    height: 196px;
+    left: 0px;
+    top: 96px;
+    background: #F7F9FB;
+    border: 1px solid #17252A;
+    border-radius: 30px;
+}
+
+::placeholder {
+    padding-left: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.calculations__form__submit {
+    box-sizing: border-box;
+    position: absolute;
+    width: 193px;
+    height: 51px;
+    left: 1060px;
+    top: 241px;
+    border: 2px solid #17252A;
+    border-radius: 20px;
+    background-color: rgba(0, 125, 215, 0);
+}
+
+INPUT[type="submit"] {
+    font-weight: 600;
+    font-size: 18px;
+    color: #17252A;
+}
