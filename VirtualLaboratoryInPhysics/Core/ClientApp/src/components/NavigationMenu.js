@@ -25,7 +25,7 @@ export class NavigationMenu extends Component {
                             <Nav.Link href="/Works" id="item_link">РАБОТЫ</Nav.Link>
                             <Nav.Link href="/" id="item_link">ТЕСТЫ</Nav.Link>
                             <Nav.Link href="/" id="item_link">ОЦЕНКИ</Nav.Link>
-                            <Nav.Link href="/" id="item_link">УЧЕТНАЯ ЗАПИСЬ</Nav.Link>
+                            <Nav.Link href="/Account" id="item_link">УЧЕТНАЯ ЗАПИСЬ</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 </Navbar>

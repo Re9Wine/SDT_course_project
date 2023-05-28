@@ -354,7 +354,7 @@ body {
     height: 200px;
     left: 427px;
     top: -17px;
-    background: url('../src/img/svg/arrow1.svg') no-repeat;
+    background: url('../img/svg/arrow1.svg') no-repeat;
 }
 
 .arrow2 {
@@ -363,7 +363,7 @@ body {
     height: 190px;
     left: 0px;
     top: 504px;
-    background: url('../src/img/svg/arrow2.svg') no-repeat;
+    background: url('../img/svg/arrow2.svg') no-repeat;
 }
 
 .calculations {
@@ -391,7 +391,7 @@ body {
 .calculations__formula__img {
     width: 378px;
     height: 40px;
-    background: url('../src/img/formula.png') no-repeat;
+    background: url('../img/formula.png') no-repeat;
 }
 
 .calculations__text {
