@@ -14,10 +14,10 @@ namespace Domain.Entity
         public Guid UserId { get; set; }
 
         [Required]
-        [FileExtensions(Extensions = "doxc")]
+        [FileExtensions(Extensions = "docx")]
         public string Content { get; set; }
 
-        public int Grade { get; set; }
+        public int Grade { get; set; } = 0;
 
         [ForeignKey(nameof(LaboratoryWorkId))]
         public virtual LaboratoryWork LaboratoryWorkNavigation { get; set; }

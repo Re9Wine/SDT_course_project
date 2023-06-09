@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Table from 'react-bootstrap/Table';
-import Nav from 'react-bootstrap/Nav'
+import { Container, Row, Col, Table, Nav } from 'react-bootstrap'
 
 export class Works extends Component {
+    constructor(props){
+        super(props)
+    }
     static displayName = Works.name;
 
     render() {
@@ -21,39 +20,24 @@ export class Works extends Component {
                                 <tr className="th__works">
                                     <th>Номер</th>
                                     <th>Название</th>
-                                    <th>Оценка</th>
+                                    <th>Состояние</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>4</td>
                                     <td id="name__works"><Nav.Link href="/Execution4">Определение радиуса кривизны линзы с помощью колец Ньютона</Nav.Link></td>
-                                    <td>проверено</td>
+                                    <td>не пройдена</td>
                                 </tr>
                                 <tr>
                                     <td>11</td>
                                     <td id="name__works"><Nav.Link href="/Execution11">Измерение длины световой волны с помощью дифракционной решетки</Nav.Link></td>
-                                    <td>отправлено</td>
+                                    <td>проверена</td>
                                 </tr>
                                 <tr>
                                     <td>16</td>
                                     <td id="name__works"><Nav.Link href="/Execution">Измерение оптической разности хода интерферирующих лучей</Nav.Link></td>
-                                    <td>проверено</td>
-                                </tr>
-                                <tr>
-                                    <td>№</td>
-                                    <td id="name__works">текст</td>
-                                    <td>не готово</td>
-                                </tr>
-                                <tr>
-                                    <td>№</td>
-                                    <td id="name__works">текст</td>
-                                    <td>не готово</td>
-                                </tr>
-                                <tr>
-                                    <td>№</td>
-                                    <td id="name__works">текст</td>
-                                    <td>не готово</td>
+                                    <td>не пройдена</td>
                                 </tr>
                             </tbody>
                         </Table>

@@ -1,5 +1,6 @@
 .container-Home {
-    width: 1440px;
+    max-width: 1440px;
+    margin: 0 auto;
     height: 893px;
     min-height: 100%;
 }
@@ -11,7 +12,7 @@
     left: 600px;
     top: 40px;
     
-    background: no-repeat url(C:/Users/Виктория/web-app/src/img/imageHome1.jpg);
+    /* background: no-repeat url(C:/Users/Виктория/web-app/src/img/imageHome1.jpg); */
 }
 
 .img_home2{
@@ -20,7 +21,7 @@
     height: 468px;
     left: -45px;
 
-    background: no-repeat url(C:/Users/Виктория/web-app/src/img/imageHome2.jpg);
+    /* background: no-repeat url(C:/Users/Виктория/web-app/src/img/imageHome2.jpg); */
     background-size: 100%;
 }
 
@@ -92,7 +93,7 @@
     left: 62px;
     top: 0px;
 
-    background-image: url(C:\Users\Виктория\web-app\src\img\icon1.png);
+    /* background-image: url(C:\Users\Виктория\web-app\src\img\icon1.png); */
 }
 
 .img_icon2 {
@@ -101,7 +102,7 @@
     height: 150px;
     left: 65px;
     top: 0px;
-    background-image: url(C:\Users\Виктория\web-app\src\img\icon2.png);
+    /* background-image: url(C:\Users\Виктория\web-app\src\img\icon2.png); */
 }
 
 .img_icon3 {
@@ -110,5 +111,48 @@
     height: 150px;
     left: 82px;
     top: 0px;
-    background-image: url(C:\Users\Виктория\web-app\src\img\icon3.png);
+    /* background-image: url(C:\Users\Виктория\web-app\src\img\icon3.png); */
+}
+
+.loading{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.grades-page{
+    max-width: 1440px;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+.grades-table{
+    margin-top: 30px;
+    max-width: 1440px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.grades-table-row{
+    height: 40px;
+}
+
+.grades-table-labNumber{
+    width: 40px;
+}
+
+.grades-table-garde{
+    width: 80px;
+}
+
+.grades-table-labName{
+    padding-left: 20px;
+    text-align: start;
+    width: 660px;
+}
+
+.grades-table-report{
+    padding-left: 20px;
+    text-align: start;
+    width: 660px;
 }

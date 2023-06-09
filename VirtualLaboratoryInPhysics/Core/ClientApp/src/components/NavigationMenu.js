@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
+import { Nav, Navbar } from 'react-bootstrap'
 
 export class NavigationMenu extends Component {
+    constructor(props){
+        super(props)
+    }
     static displayName = NavigationMenu.name;
 
     render() {
@@ -19,13 +21,12 @@ export class NavigationMenu extends Component {
                 </div>
             <Navbar expand="lg">
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto" id="item">
-                            <Nav.Link href="/" id="item_link">ГЛАВНАЯ</Nav.Link>
-                            <Nav.Link href="/Works" id="item_link">РАБОТЫ</Nav.Link>
-                            <Nav.Link href="/" id="item_link">ТЕСТЫ</Nav.Link>
-                            <Nav.Link href="/" id="item_link">ОЦЕНКИ</Nav.Link>
-                            <Nav.Link href="/Account" id="item_link">УЧЕТНАЯ ЗАПИСЬ</Nav.Link>
+                    <Navbar.Collapse className='menu-container' id="basic-navbar-nav">
+                        <Nav className="menu" id="item">
+                            <Nav.Link href="/" className="menu-item" id="item_link">ГЛАВНАЯ</Nav.Link>
+                            <Nav.Link href="/Works" className="menu-item" id="item_link">РАБОТЫ</Nav.Link>
+                            <Nav.Link href="/Grades" className="menu-item" id="item_link">ОЦЕНКИ</Nav.Link>
+                            <Nav.Link href="/Account" className="menu-item" id="item_link">УЧЕТНАЯ ЗАПИСЬ</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 </Navbar>

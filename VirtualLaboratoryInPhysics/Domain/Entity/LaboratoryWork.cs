@@ -13,6 +13,17 @@ namespace Domain.Entity
             GroupLaboratoryWorks = new HashSet<GroupLaboratoryWorks>();
         }
 
+        public LaboratoryWork(LabForm labForm)
+        {
+            Number = labForm.Number;
+            Name = labForm.Name;
+            Objective = labForm.Objective;
+            SampleReport = labForm.SampleReport;
+            CriteriaForEvaluation = labForm.CriteriaForEvaluation;
+            Reports = new HashSet<Report>();
+            GroupLaboratoryWorks = new HashSet<GroupLaboratoryWorks>();
+        }
+
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
@@ -25,11 +36,11 @@ namespace Domain.Entity
         public string Objective { get; set; }
 
         [Required]
-        [FileExtensions(Extensions = "doxc")]
+        [FileExtensions(Extensions = "docx")]
         public string SampleReport { get; set; }
 
         [Required]
-        [FileExtensions(Extensions = "doxc")]
+        [FileExtensions(Extensions = "docx")]
         public string CriteriaForEvaluation { get; set; }
 
         public virtual ICollection<Report> Reports { get; set; }

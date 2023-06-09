@@ -1,4 +1,5 @@
 ﻿using Domain.Entity;
+using Domain.View;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL
@@ -20,6 +21,7 @@ namespace DAL
         public DbSet<User> Users => Set<User>();
         public DbSet<Report> Reports => Set<Report>();
         public DbSet<GroupLaboratoryWorks> GroupLaboratoryWorks => Set<GroupLaboratoryWorks>();
+        public DbSet<ReportView> ReportView => Set<ReportView>();
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

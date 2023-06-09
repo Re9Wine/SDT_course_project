@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import Table from 'react-bootstrap/Table';
-import { useDrag, useDrop } from 'react-dnd';
+// import { useDrag, useDrop } from 'react-dnd';
 
 export class Execution extends Component {
+    constructor(props){
+        super(props),
+        this.state = {
+            imageIndex: 0,
+            imageIndex2: 0,
+            selectedPosition: null,
+            selectedImageIndex: null,
+            selectedImageIndex2: null
+        }
+    }
     static displayName = Execution.name;
-    
-    state = {
-        imageIndex: 0,
-        imageIndex2: 0,
-        selectedPosition: null,
-        selectedImageIndex: null,
-        selectedImageIndex2: null
-      };
       
       images = [
         "clear.jpg",

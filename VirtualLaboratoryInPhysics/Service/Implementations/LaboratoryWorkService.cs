@@ -10,6 +10,9 @@ namespace Service.Implementations
     {
         private readonly ILaboratoryWorkRepository _repository;
 
+        private const string SampleReportDirectoryPath = "/wwwroot/SampleReport/";
+        private const string CriteriaForEvaluationDirectoryPath = "/wwwroot/CriteriaForEvaluation/";
+
         public LaboratoryWorkService(ILaboratoryWorkRepository repository)
         {
             _repository = repository;
@@ -21,6 +24,9 @@ namespace Service.Implementations
             {
                 return Task.FromResult(false);
             }
+
+            laboratoryWork.SampleReport = SampleReportDirectoryPath + laboratoryWork.SampleReport;
+            laboratoryWork.CriteriaForEvaluation = CriteriaForEvaluationDirectoryPath + laboratoryWork.CriteriaForEvaluation;
 
             return _repository.Create(laboratoryWork);
         }

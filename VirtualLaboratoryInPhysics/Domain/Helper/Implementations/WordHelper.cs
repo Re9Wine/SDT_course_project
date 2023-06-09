@@ -7,16 +7,16 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace Domain.Helper.Implementations
 {
-    internal class WordHelper : IWordHelper
+    public class WordHelper : IWordHelper
     {
-        private Parser _parser;
+        private readonly IParser _parser;
 
-        public WordHelper(Parser parser)
+        public WordHelper(IParser parser)
         {
             _parser = parser;
         }
 
-        public void FillFile(Word.Application application, Dictionary<string, string> items)
+        public void FillFile(Word.Application application, Dictionary<string, int> items)
         {
             try
             {
@@ -24,7 +24,7 @@ namespace Domain.Helper.Implementations
                 {
                     Word.Find find = application.Selection.Find;
                     find.Text = item.Key;
-                    find.Replacement.Text = item.Value;
+                    find.Replacement.Text = item.Value.ToString();
 
                     Object wrap = Word.WdFindWrap.wdFindContinue;
                     Object replace = Word.WdReplace.wdReplaceAll;
@@ -64,16 +64,34 @@ namespace Domain.Helper.Implementations
             document.Close();
         }
 
-        public void SaveDocument(Word.Document document, string filePath)
+        public string SaveDocument(Word.Document document, string filePath)
         {
-            string bonus = "";
+            string newFilePath = new string(filePath.ToCharArray());
 
             if (_parser.FileExist(filePath))
             {
-                bonus = "1"; // TODO посмотреть, можно ли это как-то нормально сделать
+                int bonusIndex = newFilePath.IndexOf('.');
+
+                if (bonusIndex < 0)
+                {
+                    bonusIndex = 0;
+                }
+
+                string substring = newFilePath.Substring(filePath.LastIndexOf('_') + 1, bonusIndex - filePath.LastIndexOf('_') - 1);
+
+                if (int.TryParse(substring, out int copyNumber))
+                {
+                    newFilePath = newFilePath.Replace(substring, (copyNumber + 1).ToString());
+                }
+                else
+                {
+                    newFilePath = newFilePath.Insert(bonusIndex, "_1");
+                }
             }
 
-            document.SaveAs2(FileName: filePath + bonus);
+            document.SaveAs2(FileName: newFilePath);
+
+            return newFilePath;
         }
 
         public Word.Application CreateEmptyFile()

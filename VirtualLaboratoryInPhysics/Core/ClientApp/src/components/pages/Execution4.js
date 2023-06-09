@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import Table from 'react-bootstrap/Table';
+// import Table from 'react-bootstrap/Table';
 
 export class Execution4 extends Component {
+    constructor(props){
+        super(props)
+    }
     static displayName = Execution4.name;
 
     render() {

@@ -5,12 +5,10 @@ body {
     margin: 0px;
 }
 
-.wrapper {
-    position: absolute;
+.wrapper-ex11 {
     max-width: 1440px;
     max-height: 2570px;
-    left: 1px;
-    top: 300px;
+    margin: 0 auto;
 }
 
 .Laborator__setup {

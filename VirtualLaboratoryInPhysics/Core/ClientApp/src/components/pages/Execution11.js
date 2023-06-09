@@ -1,18 +1,115 @@
+import { event } from 'jquery';
 import React, { Component } from 'react';
 import Table from 'react-bootstrap/Table';
 
 export class Execution11 extends Component {
     static displayName = Execution11.name;
 
-    state = {
-        isDragging: false,
-        isDragging: false,
-        verticalLineLeft: 0,
-        mousePosition2: 700,
-        diffractionPatternLeft: 0, // начальное значение координаты left
-        mousePosition: 70, // координаты мыши по горизонтали
-      };
+    constructor(props){
+        super(props),
+        this.state = {
+            isDragging: false,
+            isDragging2: false,
+            verticalLineLeft: 0,
+            mousePosition2: 700,
+            diffractionPatternLeft: 0, // начальное значение координаты left
+            mousePosition: 70, // координаты мыши по горизонтали
+            formData: {
+                "<kl1>": 0,
+                "<kr1>": 0,
+                "<ka1>": 0,
+                "<x1>": 0,
+                "<l1>": 0,
+                "<y1>": 0,
+                "<kl2>": 0,
+                "<kr2>": 0,
+                "<ka2>": 0,
+                "<x2>": 0,
+                "<l2>": 0,
+                "<y2>": 0,
+                "<kl3>": 0,
+                "<kr3>": 0,
+                "<ka3>": 0,
+                "<x3>": 0,
+                "<l3>": 0,
+                "<y3>": 0,
+                "<kl4>": 0,
+                "<kr4>": 0,
+                "<ka4>": 0,
+                "<x4>": 0,
+                "<l4>": 0,
+                "<y4>": 0,
+            }
+          }
+        }
     
+        submit = async (event) => {
+         event.preventDefault();
+
+         try{
+            await fetch("Report", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "formData": this.state.formData,
+                    "report": {
+                        "LaboratoryWorkId": "BC09F700-DCD0-401C-034E-08DB66AF2CBB",
+                        "UserId": "CC689CF9-23F4-4DF9-40DD-08DB66A02F4C",
+                        "Content": "admin_Thermodynamic_System.docx"
+                    }
+                })
+            })
+            .then(async response => {
+                if(response.status == 200){
+                    this.setState({formData : {
+                        "<kl1>": 0,
+                        "<kr1>": 0,
+                        "<ka1>": 0,
+                        "<x1>": 0,
+                        "<l1>": 0,
+                        "<y1>": 0,
+                        "<kl2>": 0,
+                        "<kr2>": 0,
+                        "<ka2>": 0,
+                        "<x2>": 0,
+                        "<l2>": 0,
+                        "<y2>": 0,
+                        "<kl3>": 0,
+                        "<kr3>": 0,
+                        "<ka3>": 0,
+                        "<x3>": 0,
+                        "<l3>": 0,
+                        "<y3>": 0,
+                        "<kl4>": 0,
+                        "<kr4>": 0,
+                        "<ka4>": 0,
+                        "<x4>": 0,
+                        "<l4>": 0,
+                        "<y4>": 0,
+                        }
+                    })
+                    alert("Отчет отправлен")
+                }
+                else{
+                    throw "Ошибка запроса"
+                }
+            })
+         }  
+         catch(error){
+            console.log(error)
+         }
+        }
+
+      handleTableChange = (key, value) => {
+        let copy = Object.assign(new Map(), this.state.formData);
+
+        copy[key] = value;
+
+        this.setState({ formData: copy });
+      }
+
       handleMouseDown = (event) => {
         event.preventDefault();
         this.setState({ isDragging: true });
@@ -49,7 +146,7 @@ export class Execution11 extends Component {
         const { diffractionPatternLeft, verticalLineLeft } = this.state;
 
         return (
-            <section className="wrapper">
+            <section className="wrapper-ex11">
                 <div className="Laborator__setup">
                     <p className="lab11__titile">Лабораторная работа №11</p>
                     <p className="lab11__name">Измерение длины световой волны с помощью дифракционной решетки</p>
@@ -110,11 +207,11 @@ export class Execution11 extends Component {
                     <Table  className="lab11__table">
                         <thead>
                             <tr className="table__tittle_lab11">
-                                <th rowspan="2">Порядок спектра, k</th>
-                                <th colspan="3">Видимая граница спектра по шкале, м</th>
-                                <th rowspan="2">Длина волны, м</th>
-                                <th rowspan="2">Расстояние l, м</th>
-                                <th rowspan="2">Частота колебаний, Гц</th>
+                                <th rowSpan="2">Порядок спектра, k</th>
+                                <th colSpan="3">Видимая граница спектра по шкале, м</th>
+                                <th rowSpan="2">Длина волны, м</th>
+                                <th rowSpan="2">Расстояние l, м</th>
+                                <th rowSpan="2">Частота колебаний, Гц</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -123,43 +220,43 @@ export class Execution11 extends Component {
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11"/></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<kl1>']} onChange={(event) => this.handleTableChange('<kl1>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<kr1>']} onChange={(event) => this.handleTableChange('<kr1>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<ka1>']} onChange={(event) => this.handleTableChange('<ka1>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<x1>']} onChange={(event) => this.handleTableChange('<x1>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<l1>']} onChange={(event) => this.handleTableChange('<l1>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<y1>']} onChange={(event) => this.handleTableChange('<y1>', event.target.value)} /></td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<kl2>']} onChange={(event) => this.handleTableChange('<kl2>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<kr2>']} onChange={(event) => this.handleTableChange('<kr2>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<ka2>']} onChange={(event) => this.handleTableChange('<ka2>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<x2>']} onChange={(event) => this.handleTableChange('<x2>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<l2>']} onChange={(event) => this.handleTableChange('<l2>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<y2>']} onChange={(event) => this.handleTableChange('<y2>', event.target.value)} /></td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<kl3>']} onChange={(event) => this.handleTableChange('<kl3>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<kr3>']} onChange={(event) => this.handleTableChange('<kr3>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<ka3>']} onChange={(event) => this.handleTableChange('<ka3>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<x3>']} onChange={(event) => this.handleTableChange('<x3>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<l3>']} onChange={(event) => this.handleTableChange('<l3>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<y3>']} onChange={(event) => this.handleTableChange('<y3>', event.target.value)} /></td>
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
-                                <td><input type="text" name="text" className="cell__lab11" /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<kl4>']} onChange={(event) => this.handleTableChange('<kl4>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<kr4>']} onChange={(event) => this.handleTableChange('<kr4>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<ka4>']} onChange={(event) => this.handleTableChange('<ka4>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<x4>']} onChange={(event) => this.handleTableChange('<x4>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<l4>']} onChange={(event) => this.handleTableChange('<l4>', event.target.value)} /></td>
+                                <td><input type="number" name="text" className="cell__lab11" value={this.state.formData['<y4>']} onChange={(event) => this.handleTableChange('<y4>', event.target.value)} /></td>
                             </tr>
                         </tbody>
                     </Table>
-                    <form className="form__lab11">
+                    <form className="form__lab11" onSubmit={this.submit}>
                         <input className="form__conclusion__lab11" type="text" name="text" placeholder="Введите вывод..." />
                         <input className="form__submit__lab11" type="submit" name="submit" value="отправить" />
                     </form>
