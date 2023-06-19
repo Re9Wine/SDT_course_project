@@ -77,16 +77,15 @@ namespace Domain.Helper.Implementations
                     bonusIndex = 0;
                 }
 
-                string substring = newFilePath.Substring(filePath.LastIndexOf('_') + 1, bonusIndex - filePath.LastIndexOf('_') - 1);
+                int copyNumber = 1;
+                string bonusString = string.Concat("_", copyNumber);
 
-                if (int.TryParse(substring, out int copyNumber))
+                while(_parser.FileExist(newFilePath.Insert(bonusIndex, bonusString)))
                 {
-                    newFilePath = newFilePath.Replace(substring, (copyNumber + 1).ToString());
+                    bonusString = string.Concat("_", ++copyNumber);
                 }
-                else
-                {
-                    newFilePath = newFilePath.Insert(bonusIndex, "_1");
-                }
+
+                newFilePath = newFilePath.Insert(bonusIndex, bonusString);
             }
 
             document.SaveAs2(FileName: newFilePath);
